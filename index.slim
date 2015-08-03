@@ -1,0 +1,67 @@
+
+| {% include variables.html %}
+
+#kb
+  .container.main
+    .row
+      .col-md-6
+        .callout
+          h4
+            i.fa.fa-cog.fa-4x
+            br Getting Started
+      .col-md-6
+        .callout
+          h4
+            a href="#knowledgebase"
+              i.fa.fa-balance-scale.fa-4x
+              br Knowledge Base
+
+  .container
+    section.ac-container
+      | {% for each in site.data.sections %}
+      | {% if each[1].top %}
+      | {% assign ident=each[0] %}
+      div.ac-item
+        input id="ac-{{ident}}" name='accordion-1' type='radio'
+        label for='ac-{{ident}}'
+          h4 
+            | {{ each[1].display_name }}
+      
+        article
+          / Start of loop of post categories 
+          .container
+            .row
+              | {% for cat in each[1].subcategories %}
+              | {% assign section = site.data.sections[cat] %}
+              | {% assign posts = site.categories.[cat] | sort: 'title' %}
+              | {% assign count = site.categories.[cat] | size  %}
+              .col-md-6
+                h4
+                  //a href="{{ section.url }}"
+                  a href = "{{ section.url }}"
+                    | {{ section.display_name }}
+                
+
+                .posts
+                  | {% assign displayed = 0 %}
+                  | {% for i in (0..site.max_top) %}
+                  | {% assign post = posts[i] %}
+                  | {% if post and post.tags contains 'top' %}
+                  | {% assign displayed = displayed|plus:1 %}
+                  .item
+                     a href="{{ post.url }}" {{ post.title }}
+                  | {% endif %}
+                  | {% endfor %}
+                  | {% if displayed < count %}
+                a href = "{{ section.url }}"
+                  | See all {{ count }} articles
+                  | {% endif %}
+              | {% endfor %}
+            
+                
+
+          / end of post category loop
+      | {% endif %}
+      | {% endfor %}
+
+

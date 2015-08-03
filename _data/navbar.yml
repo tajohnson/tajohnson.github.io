@@ -1,0 +1,20 @@
+# JekyllKB v0.1.2 - Navigation Bar Permalinks
+# Set the permalinks or external URLs for the navbar
+# For external URLs add external: true
+#
+
+- title: Home
+  url: http://mailroute.net
+  external: true
+- title: Services
+  url: http://mailroute.net/services.html
+  external: true
+- title: Pricing & Signup
+  url: http://mailroute.net/pricing.html
+  external: true
+- title: Support
+  url: 
+  external: true
+- title: Company
+  url: http://mailroute.net/company.html
+  external: true

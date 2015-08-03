@@ -1,0 +1,221 @@
+/**
+* Custom Sass styles and vendor overrides
+*
+*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('./fonts/bootstrap/#{$icon-font-name}.eot');
+  src: url('./fonts/bootstrap/#{$icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/bootstrap/#{$icon-font-name}.woff') format('woff'),
+       url('./fonts/bootstrap/#{$icon-font-name}.ttf') format('truetype'),
+       url('./fonts/bootstrap/#{$icon-font-name}.svg##{$icon-font-svg-id}') format('svg');
+}
+
+
+// Font Awesome font icons path 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./fonts/font-awesome/fontawesome-webfont.eot');
+  src: url('./fonts/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/font-awesome/fontawesome-webfont.woff') format('woff'),
+       url('./fonts/font-awesome/fontawesome-webfont.ttf') format('truetype'),
+       url('./fonts/font-awesome/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style:  normal;
+}
+
+
+.navbar-collapse { clear: both;}
+
+.navbar-nav > li > a {
+  padding: 10px 25px;
+  font-size: $font-size-large;
+  &:hover {
+  	text-decoration: underline;
+  	color: $mr-red;
+  }
+}
+
+.main {
+  .callout {
+    text-align: center;
+    font-size: 6em;
+    i { padding: 10px;}
+    a { 
+        color: inherit; 
+        &:hover, &:focus {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+  }
+  h2 { text-align: center;}
+}
+
+.posts {
+    margin: 1em 0;
+    padding: 1em 0 1em 0;
+    border-top: 1px solid #ddd;
+    .item {
+        margin-bottom: 0.5em;
+    }
+    .main_index {
+              border: none;
+              padding: 0;
+    }
+    
+
+}
+
+.navbar {
+    border-bottom: 2px solid #a61c25;
+}
+.navbar-nav {
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    > li {
+      > a {
+        padding-left:  0px;
+      }
+    }
+  }
+}
+
+.article {
+ &.title {
+    font-size: $font-size-large;
+ }
+ &.created_at, &.updated_at {
+     display: inline;
+     margin-right: 2em;
+     color: $gray-light;
+ }
+    
+}
+
+.ac-container {
+  label{
+    margin: 0;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: #ffffff;
+    position: relative;
+    display: block;
+    font-weight: 300;
+    font-size: 1.1em;
+    cursor: pointer;
+    line-height: 20px;
+    &:hover {
+    }
+    h4 {
+      font-weight: 300;
+      font-size: 1.1em;
+      padding: 0;
+      margin: 0;
+      &::after {
+        font-family: "FontAwesome";
+        content: "\F107";
+        float: right;
+      }
+    }
+  }
+
+  &:label:hover:after, input:checked + label:hover:after {
+    content: '';
+	position: absolute;
+  }
+
+  input {
+    display: none;
+    &:checked + label, &:checked + label:hover {
+      background: #fff;
+    }
+    &:checked ~ article{
+	  xbox-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	  border-top: 1px solid #ddd;
+	  //transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	  height: 100%;
+    }
+  }
+
+  .ac-item {
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+  }
+  article{
+    background: #fff;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    //transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    border-top: 0;
+    p {
+      padding: 20px;
+    }
+    h4 {
+        font-weight: 300;
+        margin-top: 1em;
+    }
+  }
+}
+
+
+.breadcrumbs {
+    .navbar-nav {
+        li {
+            content: '';
+            padding: .25em .5em 0 0em;
+            a { 
+                padding: 0; 
+                font-size: 1em;
+            }
+            &:not(:last-child) {
+                a {
+                    &:after {
+                        content: " >";        
+                    }
+                }
+            }
+        }
+    }
+    .navbar {
+        border: none;
+        min-height: 2em;
+    }
+}
+
+
+
+
+#search-container {
+    max-width: 40em;
+    padding: 1em;
+    margin: 1em auto;
+    border: 1px solid lightgrey;
+}
+#search-input {
+    display: inline-block;
+    padding: .5em;
+    width: 100%;
+    font-size: 0.8em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+#results-container {
+    margin-top: -1px;
+    list-style-type: none;
+    padding: 0em 0 0 1em;
+    li:first-child { 
+        padding-top: 0.25em;
+        a { }
+    }
+}
+.search {
+}
+    

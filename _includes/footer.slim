@@ -1,0 +1,49 @@
+footer
+  / .container.navbar-fixed-bottom
+  .page-header
+  .container
+  .row
+    .col-md-12.text-center
+      ul.list-inline
+        li
+          a.mp-footer-link title="twitter" href="{{ site.twitter }}"
+            i.fa.fa-twitter.fa-2x
+        li
+          a.mp-footer-link title="github" href="{{ site.github }}"
+            i.fa.fa-github-alt.fa-2x
+        li
+          a.mp-footer-link title="youtube" href="{{ site.youtube }}"
+            i.fa.fa-youtube.fa-2x
+        li
+          a.mp-footer-link title="email" href="mailto:{{ site.email }}"
+            i.fa.fa-envelope.fa-2x
+
+  .row
+    .col-md-12.text-center
+      | {% if site.copyright %}
+      p
+        | &copy; Copyright 
+        | {{ site.time | date: "%Y" }} - {{ site.copyright }}
+        | {% endif %}
+
+
+script src="{{ site.baseurl }}js/application-min.js"
+script src="{{ site.baseurl }}js/jquery-min.js"
+script src="{{ site.baseurl }}js/bootstrap-min.js"
+script src="{{ site.baseurl }}bower_components/simple-jekyll-search/dest/jekyll-search.js"
+
+<script type="text/javascript">
+| SimpleJekyllSearch.init({
+|   searchInput: document.getElementById('search-input'),
+|   resultsContainer: document.getElementById('results-container'),
+|   json: '/search.json',
+|   searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+|   noResultsText: 'Oops! No results found',
+|   limit: 10,
+|   fuzzy: false,
+| })
+</script>
+
+
+// | {% include analytics.html %}
+// | {% include zendesk.html %}

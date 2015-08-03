@@ -1,0 +1,21 @@
+$mr-red:                                #a61c25;
+
+
+$link-color:                    $mr-red;
+
+
+$navbar-bg:                     #fff;
+$navbar-color:                  $mr-red !default;
+$navbar-link-color:             $mr-red !default;
+$navbar-link-hover-color:       #fff !default;
+
+$nav-link-hover-bg:             #fff !default;
+
+$navbar-padding-vertical:               10px;
+$navbar-height:                         82px !default;
+$navbar-margin-bottom:          0;
+
+
+$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+
+$font-size-smallest: ceil((14 * 0.75));

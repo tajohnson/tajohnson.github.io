@@ -1,0 +1,35 @@
+<footer>
+  <div class="page-header"></div>
+  <div class="container"></div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <ul class="list-inline">
+        <li>
+          <a class="mp-footer-link" href="{{ site.twitter }}" title="twitter"><i class="fa fa-twitter fa-2x"></i></a>
+        </li>
+        <li>
+          <a class="mp-footer-link" href="{{ site.github }}" title="github"><i class="fa fa-github-alt fa-2x"></i></a>
+        </li>
+        <li>
+          <a class="mp-footer-link" href="{{ site.youtube }}" title="youtube"><i class="fa fa-youtube fa-2x"></i></a>
+        </li>
+        <li>
+          <a class="mp-footer-link" href="mailto:{{ site.email }}" title="email"><i class="fa fa-envelope fa-2x"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      {% if site.copyright %}
+      <p>
+        &copy; Copyright {{ site.time | date: "%Y" }} - {{ site.copyright }}{% endif %}
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="{{ site.baseurl }}js/application-min.js"></script>
+<script src="{{ site.baseurl }}js/jquery-min.js"></script>
+<script src="{{ site.baseurl }}js/bootstrap-min.js"></script>
+<script src="{{ site.baseurl }}bower_components/simple-jekyll-search/dest/jekyll-search.js"></script>
+<script type="text/javascript">SimpleJekyllSearch.init({  searchInput: document.getElementById('search-input'),  resultsContainer: document.getElementById('results-container'),  json: '/search.json',  searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',  noResultsText: 'Oops! No results found',  limit: 10,  fuzzy: false,})</script>

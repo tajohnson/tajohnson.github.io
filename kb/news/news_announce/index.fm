@@ -1,0 +1,9 @@
+---
+layout: category_page
+title: News and Announcements
+categories:
+  - news_announce
+parents:
+  - kb
+  - news
+---

@@ -1,0 +1,38 @@
+kb:
+  display_name: MailRoute Support
+  url: /kb
+getting_started:
+  display_name: Getting Started
+  url: /kb/gettingstarted
+  top: true
+highlighted:
+  display_name: Highlighted Articles
+  url:
+news:
+  display_name: News and Announcements
+  url: /kb/news
+  top: true
+  subcategories:
+    - news_announce
+    - news_industry
+news_industry:
+  display_name: Industry News
+  url: /kb/news/news_industry
+news_announce:
+  display_name: Product Announcements
+  url: /kb/news/news_announce
+users:
+  display_name: Users
+  url: /kb/user
+  top: true
+admins:
+  display_name: Administrators
+  url: /kb/admin
+resellers:
+  display_name: Resellers
+  url: /kb/reseller
+  top: true
+developers:
+  display_name: Developers
+  url: /kb/developer
+  top: true

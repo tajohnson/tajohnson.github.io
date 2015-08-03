@@ -1,0 +1,61 @@
+---
+layout: default
+title: Knowledge Base - TOC
+---
+
+
+{% include variables.html %}
+<div id="kb">
+  <div class="container main">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="callout">
+          <h4>
+            <i class="fa fa-cog fa-4x"></i><br>Getting Started</br>
+          </h4>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="callout">
+          <h4>
+            <a href="#knowledgebase"><i class="fa fa-balance-scale fa-4x"></i><br>Knowledge Base</br></a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <section class="ac-container">
+      {% for each in site.data.sections %}{% if each[1].top %}{% assign ident=each[0] %}
+      <div class="ac-item">
+        <input id="ac-{{ident}}" name="accordion-1" type="radio"><label for="ac-{{ident}}">
+          <h4>
+            {{ each[1].display_name }}
+          </h4>
+        </label>
+        <article>
+          <div class="container">
+            <div class="row">
+              {% for cat in each[1].subcategories %}{% assign section = site.data.sections[cat] %}{% assign posts = site.categories.[cat] | sort: 'title' %}{% assign count = site.categories.[cat] | size  %}
+              <div class="col-md-6">
+                <h4>
+                  <a href="{{ section.url }}">{{ section.display_name }}</a>
+                </h4>
+                <div class="posts">
+                  {% assign displayed = 0 %}{% for i in (0..site.max_top) %}{% assign post = posts[i] %}{% if post and post.tags contains 'top' %}{% assign displayed = displayed|plus:1 %}
+                  <div class="item">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                  </div>
+                  {% endif %}{% endfor %}{% if displayed < count %}
+                </div>
+                <a href="{{ section.url }}">See all {{ count }} articles{% endif %}</a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      </div>
+      {% endif %}{% endfor %}
+    </section>
+  </div>
+</div>

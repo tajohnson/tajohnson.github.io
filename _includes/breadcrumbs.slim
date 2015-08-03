@@ -1,0 +1,16 @@
+    .container
+      .breadcrumbs
+        .nav.navbar-nav.nav-links
+          .navbar
+            ul.nav.navbar-nav.nav-links
+              | {% if page.parents %}
+              |   {% assign cats = page.parents %}
+              | {% else %}
+              |   {% assign cats = page.categories %}
+              | {% endif %}
+              | {% for cat in cats %}
+              li
+                | {% assign section = site.data.sections[cat] %}
+                a href="{{ section.url }}"
+                  | {{ section.display_name }}
+                | {% endfor %}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en" ><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  {% if site.meta.description %} 
+  <meta content="{{ site.meta.description }}" name="description">
+  {% endif %}{% if site.meta.author %} 
+  <meta content="{{ site.meta.author }}" name="author">
+  {% endif %}<title>{{ site.name }} {% if page.title %} | {{ page.title }} {% endif %}</title>
+  <link href="{{ site.baseurl }}css/application.css" media="screen" rel="stylesheet" type="text/css">
+</head>

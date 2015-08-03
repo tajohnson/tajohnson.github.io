@@ -1,0 +1,18 @@
+{% include head.html %}
+<body>
+  {% include nav.html %}
+  <div class="container content">
+    <div class="kbsection">
+      <h5>
+        <a href="/kb/">Knowledge Base</a>&nbsp; / &nbsp; <a href="{{ site.baseurl }}/kb/{{ page.category }}/">{{ page.category }}</a>
+      </h5>
+      <div class="inset">
+        <div class="kb_article">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

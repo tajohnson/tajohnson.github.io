@@ -1,0 +1,84 @@
+# JekyllKB v0.1.2 - Configuration and Settings
+# Details and configuration options can be found
+# here: http://jekyllrb.com/docs/configuration/
+#
+
+# Name your site
+name: MailRoute Knowledge Base
+
+baseurl: '/'
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+    
+
+meta:
+  description:
+  author:
+
+# Copyright owner's name for footer
+copyright: MailRoute, Inc.  
+
+# Global Settings
+
+
+markdown: redcarpet
+highlighter: pygments
+encoding: UTF-8
+
+# List of time zones supported in the TZ database
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Los_Angeles
+
+# Permalink Style
+# http://jekyllrb.com/docs/permalinks/#built-in-permalink-styles
+# output: /:categories/:title.html
+permalink: none
+
+# Absolute permalinks allows us to store pages in a page subdirectory
+# and customize how the permalink appear on a page by page basis
+# ie: A file in pages/resources/getting-started.html can have the permalink of
+# http://mydomain.com/resources/getting-started.html
+relative_permalinks: false
+
+# Exclude the following files/directories from being converted
+exclude: ['*.fm', '*.slim', '.gitignore', 'CHANGELOG.md', 'Gemfile', 'Gemfile.lock', 'LICENSE.md', 'README.md', 'Rakefile', 'config.codekit']
+
+# Collections support for the Knowledge Base
+# http://jekyllrb.com/docs/collections/
+#collections:
+#  kb:
+#    output: true
+#    layout: page
+#    permalink: /kb/:path/
+    
+    
+
+# sass
+sass:
+    sass_dir: _sass
+    sourcemap: true
+
+
+#Builder Information
+author: Tom Johnson
+email: support@mailroute.net
+twitter: //twitter.com/mailrouteinc
+twitter_username: mailrouteinc
+youtube: //www.youtube.com/channel/UCR1-1m-1_QBse7VQICh5W1Q
+github: //github.com/mailroute
+address: 'PO Box 396'
+city: Manhattan Beach
+state: California
+zip: 90267
+
+
+# how many articles in each category to display on home page?
+max_top: 5
+show_kb_articles: 3
+

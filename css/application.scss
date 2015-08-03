@@ -1,0 +1,71 @@
+//---
+//---
+
+// All Sass styles can be overridden by modifying the custom/custom.scss file
+// New Sass stylesheets should be added below using @import
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "../_sass/custom/variables",
+        "../_sass/bootstrap/bootstrap",
+        "../_sass/font-awesome/font-awesome",
+        "../_sass/syntax",
+        "../_sass/custom/custom";
+
+
+
+
+// Bootstrap font icons path 
+// https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_glyphicons.scss#L10
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('./fonts/bootstrap/#{$icon-font-name}.eot');
+  src: url('./fonts/bootstrap/#{$icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/bootstrap/#{$icon-font-name}.woff') format('woff'),
+       url('./fonts/bootstrap/#{$icon-font-name}.ttf') format('truetype'),
+       url('./fonts/bootstrap/#{$icon-font-name}.svg##{$icon-font-svg-id}') format('svg');
+}
+
+
+// Font Awesome font icons path 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./fonts/font-awesome/fontawesome-webfont.eot');
+  src: url('./fonts/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url(./fonts/font-awesome/fontawesome-webfont.woff') format('woff'),
+       url('./fonts/font-awesome/fontawesome-webfont.ttf') format('truetype'),
+       url('./fonts/font-awesome/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style:  normal;
+}
+
+
+// COLOR SCHEME
+// -------------------------
+//TODO: Insert Flat Grayscale color scheme
+
+$black:       #111      !default;
+$white:       #f9f9f9   !default;
+
+
+
+// Background color for `<body>`. Overrides Bootstrap
+$body-bg:     #f9f9f9   !default;
+
+
+// NAVBAR
+// -------------------------
+
+// Navbar links float right for desktop and left for mobile
+@media (max-width: 767px) {
+  .nav-links {
+    float: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+  float: left;
+  }
+}
+
+

@@ -1,0 +1,29 @@
+.posts {
+    padding: 0 0 1em 0;
+    //margin-left: $fa-li-width;
+    .item {
+        margin-bottom: 0.5em;
+        //padding: .5em 0;
+        //border-bottom: 1px $gray-lighter solid;
+        //&:before {
+        //    content: $fa-var-file-o; /* FontAwesome char code inside the '' */
+        //    font-family: FontAwesome; /* FontAwesome or whatever */
+        //    position: absolute;
+        //    left: -$fa-li-width;
+        //    width: $fa-li-width;
+        //    //top: (2em / 14);
+        //    text-align: center;
+        //    padding:   0;
+        //    height: 100%;
+        //    vertical-align: middle;
+        //}
+        //&:last-of-type {
+        //    border-bottom: none;
+        //}
+    }
+    .main_index {
+              border: none;
+              padding: 0;
+    }
+
+}
