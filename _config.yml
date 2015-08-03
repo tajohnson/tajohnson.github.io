@@ -6,7 +6,7 @@
 # Name your site
 name: MailRoute Knowledge Base
 
-baseurl: 'tajohnson.github.io'
+baseurl: 'tajohnson.github.io/'
 
 defaults:
   -
