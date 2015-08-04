@@ -8,7 +8,7 @@
         .callout
           h4
             a href="/gettingstarted/"
-              i.fa.fa-optin-monster.fa-4x
+              i.fa.fa-rocket.fa-4x
               br Getting Started
       .col-md-6
         .callout
@@ -46,7 +46,8 @@
 
                 .posts
                   | {% assign displayed = 0 %}
-                  | {% for i in (0..site.max_top) %}
+                  | {% assign max = site.max_top | minus: 1 %}
+                  | {% for i in (0..max) %}
                   | {% assign post = posts[i] %}
                   | {% if post and post.tags contains 'top' %}
                   | {% assign displayed = displayed|plus:1 %}
