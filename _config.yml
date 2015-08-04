@@ -80,5 +80,6 @@ zip: 90267
 
 # how many articles in each category to display on home page?
 max_top: 5
+max_recent: 10
 show_kb_articles: 3
 

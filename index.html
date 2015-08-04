@@ -11,20 +11,20 @@ title: Knowledge Base - TOC
       <div class="col-md-6">
         <div class="callout">
           <h4>
-            <i class="fa fa-optin-monster fa-4x"></i><br>Getting Started</br>
+            <a href="/gettingstarted/"><i class="fa fa-optin-monster fa-4x"></i><br>Getting Started</br></a>
           </h4>
         </div>
       </div>
       <div class="col-md-6">
         <div class="callout">
           <h4>
-            <a href="#knowledgebase"><i class="fa fa-optin-monster fa-4x"></i><br>Knowledge Base</br></a>
+            <a data-toggle="collapse" href="#kb_index"><i class="fa fa-optin-monster fa-4x"></i><br>Knowledge Base</br></a>
           </h4>
         </div>
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container collapse" id="kb_index">
     <section class="ac-container">
       {% for each in site.data.sections %}{% if each[1].top %}{% assign ident=each[0] %}
       <div class="ac-item">
@@ -57,5 +57,57 @@ title: Knowledge Base - TOC
       </div>
       {% endif %}{% endfor %}
     </section>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="recent">
+          <h4>
+            Recent Activity
+          </h4>
+          <div class="posts">
+            {% for post in site.posts | limit:site.max_recent %}
+            <div class="item">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="recent">
+          <h4>
+            Highlighted Articles
+          </h4>
+          <div class="posts">
+            {% assign posts = site.posts  %}{% for post in posts %}{% if post and post.tags contains 'highlighted' %}
+            <div class="item">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </div>
+            {% endif %}{% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="calltoaction">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="tagline">
+            <h3>
+              MailRoute's like a Heimdall for your Rainbow Bridge
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="action">
+            <div class="btn-group">
+              <button class="btn btn-large btn-warning">Get Your Free Trial Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
